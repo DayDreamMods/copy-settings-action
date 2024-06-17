@@ -16,12 +16,25 @@ inputs:
     description: 'A list of named settings to copy.'
     required: false
     default: |
-      allow_squash_merge
+      homepage
+      is_template
+      default_branch
+      delete_branch_on_merge
+      allow_forking
+      allow_auto_merge
       allow_merge_commit
       allow_rebase_merge
-      allow_auto_merge
-      delete_branch_on_merge
+      allow_squash_merge
       allow_update_branch
+      has_wiki
+      has_issues
+      has_projects
+      merge_commit_title
+      merge_commit_message
+      squash_merge_commit_title
+      squash_merge_commit_message
+      web_commit_signoff_required
+
 runs:
   using: 'node20'
   main: 'index.js'

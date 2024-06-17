@@ -5,6 +5,23 @@ inputs:
     description: 'The token to use.'
     require: false
     default: ${{ github.token }}
+  source-repo:
+    description: 'The repository to obtain the rulesets from; Ensure the provided secret is able to access this.'
+    required: true
+  dest-repo:
+    description: 'The repository to copy the rulesets onto. Defaults to the current repository; Ensure the provided secret is able to access this.'
+    required: false
+    default: ''
+  settings:
+    description: 'A list of named settings to copy.'
+    required: false
+    default: |
+      allow_squash_merge
+      allow_merge_commit
+      allow_rebase_merge
+      allow_auto_merge
+      delete_branch_on_merge
+      allow_update_branch
 runs:
   using: 'node20'
   main: 'index.js'

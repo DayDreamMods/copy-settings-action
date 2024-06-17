@@ -10,7 +10,7 @@ const github = require('@actions/github');
     const [sourceOwner, sourceRepoName] = sourceRepo.split('/');
     const [destOwner, destRepoName] = destRepo.split('/');
     
-    const sourceRequest = await github.rest.repos.get({
+    const sourceRequest = await octokit.rest.repos.get({
         owner: sourceOwner, repo: sourceRepoName
     });
     if (sourceRequest.status != 200)

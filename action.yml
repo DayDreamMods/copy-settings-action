@@ -20,7 +20,6 @@ inputs:
       is_template
       default_branch
       delete_branch_on_merge
-      allow_forking
       allow_auto_merge
       allow_merge_commit
       allow_rebase_merge

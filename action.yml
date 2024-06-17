@@ -1,0 +1,10 @@
+name: 'copy-settings-action'
+description: "A GitHub action that copies settings from one repository to another."
+inputs:
+  token:
+    description: 'The token to use.'
+    require: false
+    default: ${{ github.token }}
+runs:
+  using: 'node20'
+  main: 'index.js'
